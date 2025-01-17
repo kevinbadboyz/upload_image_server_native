@@ -10,6 +10,7 @@ class UserRepository {
   Future<List<UserModel>> getUsers() async {
     try {
       // var response = await Dio().get('http://54.243.8.93:8000/api/users');
+      // Running in local computer using http://10.0.2.2:8000
       var response = await Dio().get('http://10.0.2.2:8000/api/users');
       debugPrint('GET All User Response : ${response.data}');
       List list = response.data;
@@ -38,6 +39,7 @@ class UserRepository {
     try {
       // var response =
       //     await Dio().post('http://54.243.8.93:8000/api/users', data: formData);
+      // Running in local computer using http://10.0.2.2:8000
       var response =
           await Dio().post('http://10.0.2.2:8000/api/users', data: formData);
       debugPrint('POST Response : ${response.data}');
@@ -64,6 +66,7 @@ class UserRepository {
     try {
       // var response =
       //     await Dio().post('http://54.243.8.93:8000/api/users', data: formData);
+      // Running in local computer using http://10.0.2.2:8000
       var response = await Dio()
           .put('http://10.0.2.2:8000/api/user/${userParam.id}', data: formData);
       debugPrint('POST Response : ${response.data}');
